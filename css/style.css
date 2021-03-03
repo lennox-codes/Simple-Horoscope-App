@@ -1,0 +1,340 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+  font-family: sans-serif;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.hidden {
+  display: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.content-wrapper {
+  min-height: calc(100vh - 50px);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1 {
+  font-family: 'Redressed', cursive;
+  font-size: 100px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  flex-flow: column;
+  align-items: center;
+  background: linear-gradient(#3f37c9, #b5179e);
+  background: -webkit-linear-gradient(#3f37c9, #b5179e);
+  height: 400px;
+  width: 100%;
+  color: white;
+  overflow: visible;
+}
+
+
+.hero p {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+
+.hero:before {
+  content: "";
+  display: block;
+  position: absolute;;
+  height: 400px;
+  width: 100%;
+  background: white;
+  clip-path: polygon(100% 70%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(100% 70%, 0% 100%, 100% 100%);
+}
+
+.date-selection {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 400px;
+  top: 300px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 20px;
+  z-index: 20;
+}
+
+.date-selection label {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  bottom: 177px;
+  background: #6930c3;
+  border-radius: 10px;
+  border: 5px solid white;
+  border-bottom: none;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  color: white;
+  font-family: 'Redressed', cursive;
+}
+
+.date-input {
+  display: flex;
+  border: none;
+  outline: none;
+  border: 3px solid #b5179e;
+  border-radius: 10px;
+  background: transparent;
+  -webkit-background: transparent;
+}
+
+
+.date-input .month:focus, .date-input .day:focus {
+  outline: none;
+}
+
+.date-input .month:hover, .date-input .day:hover {
+  cursor: pointer;
+}
+
+
+
+.date-input select {
+  text-align: center;
+  height: 50px;
+  font-size: 18px;
+  padding: 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  -webkit-background: transparent;
+}
+
+.date-input select option {
+  background: transparent;
+}
+
+.date-selection input:focus {
+  outline: none
+}
+
+
+.date-selection button {
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px #3a0ca3;
+  padding: 10px;
+  background: #3f37c9;
+  color: white;
+  text-align: center;
+  border: none;
+  font-family: 'Redressed', cursive;
+}
+
+
+.date-selection button:focus {
+  outline: none;
+  border: 0;
+}
+
+.date-selection button:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+}
+
+
+.input-section {
+  margin-top: 100px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+.result-section {
+  margin-top: 120px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 1200px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.result-section h2 {
+  font-family: 'Redressed', cursive;
+  font-size: 50px;
+}
+
+.result-section .errormessage {
+  text-align: center;
+}
+
+.result-section .horo-description {
+  width: 70%;
+}
+
+.result-section .horo-text{
+  font-size: 20px;
+  line-height: 30px;
+
+}
+
+.result-section .horo-image {
+  width: 30%;
+}
+
+.horo-image img {
+  width: 80%;
+  float: right;
+}
+
+.result-section .horo-title {
+  display: inline-flex;
+  color: #b5179e;
+}
+
+.horo-icon {
+  width: 50px;
+  margin: 5px;
+  float: left;
+}
+
+footer {
+  height: 50px;
+  padding: 0 20px 0 20px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  background: #6930c3;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  text-decoration: underline;
+  color: #fff;
+}
+
+footer a:visited {
+  color:#fff;
+}
+
+footer a:hover {
+  color: #f72585;
+}
+
+@media screen and (max-width: 870px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .result-section {
+    flex-flow: column wrap;
+    max-width: 1200px;
+    padding: 20px;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .result-section h2 {
+    text-align: center;
+  }
+
+  .result-section .horo-description {
+    width: 100%;
+    order: 2;
+  }
+
+  .result-section .horo-image {
+    width: 50%;
+    order: 1;
+  }
+
+  .result-section .horo-image img {
+    width: 100%;
+    float: none;
+  }
+
+}
+
+@media screen and (max-width: 530px) {
+  .date-selection {
+    max-width: 80%;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .date-selection {
+    top: 350px;
+  }
+
+  .hero, .hero:before {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 40px;
+  }

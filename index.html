@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="Zodiac Sign Generator" content="Input of birthday yields horoscope">
+  	<meta name="keywords" content="horoscope, zodiac, astrology">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Horoscope Generator</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	</head>
+	<body>
+		<section class="content-wrapper">
+			<div class="hero">
+				<section>
+					<h1>Zodiac Sign Generator</h1>
+					<p>Discover your personality traits using this free tool</p>
+				</section>
+				<section class="date-selection">
+					<label for="date-selection">Please select your birthday</label>
+					<section class="date-input">
+						<select id="months" class="month" name="">
+							<option value="">Month</option>
+						</select>
+						<select id="days" class="day" name="">
+							<option value="">Day</option>
+						</select>
+					</section>
+					<button id="getHoroscope"type="submit" name="button">Generate Zodiac Sign</button>
+				</section>
+			</div>
+				<section class="result-section">
+					<section class="horo-description">
+						<h2>
+							<span id="horoIntro">
+							</span>
+							<span id="horoTitle" class="horo-title">
+								<img id="horoIcon" class="horo-icon hidden" src="img/horo_icons/aries.svg" alt="horoscope icon">
+							</span>
+						</h2>
+						<p id="horoText" class="horo-text"></p>
+					</section>
+					<section class="horo-image">
+						<img src="" alt="">
+					</section>
+				</section>
+		</section>
+		<footer>
+			<p>Zodiac sign descriptions are courtesy of <a href="https://my.astrofame.com/" title="Astrofame">Astrofame</a> </p>
+			<p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+		</footer>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
