@@ -39,7 +39,7 @@ selectMonth.addEventListener("change", getMonth);
 
 let day;
 function getMonth() {
-  //clear the day option drop down first to avoid the appending of additional days
+  // Clear the day option drop down first to avoid the appending of additional days
   // this is so that the days goes to undefined so that last iteration for day isn't stored.
   day = undefined;
   month = selectMonth.value;
@@ -49,7 +49,7 @@ function getMonth() {
   const dayOption = document.createElement("option");
   selectDay.appendChild(dayOption);
   dayOption.innerHTML = "Day";
-  //function start
+  // Function start
   if (
     month === months[3] ||
     month === months[5] ||
@@ -64,13 +64,13 @@ function getMonth() {
   }
 }
 
-//grab the value of day
+// Grab the value of day
 selectDay.addEventListener("change", getDay);
 function getDay() {
   day = parseInt(selectDay.value);
 }
 
-//construct the horoscopes using Objected-Oriented-Programming
+// Construct the horoscopes using Objected-Oriented-Programming
 const aquarius = {
   name: "Aquarius",
   description:
